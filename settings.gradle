@@ -1,0 +1,12 @@
+def projectTreeRootDir = rootProject.projectDir 
+
+
+
+// Shared components
+
+def javaScriptDir = new File( projectTreeRootDir, 'javascript' )
+
+def meteorDir = new File( javaScriptDir, 'meteor')
+
+include ':lc-js-meteor-todo'
+project( ':lc-js-meteor-todo' ).projectDir = new File( meteorDir, 'simple-todos' )
