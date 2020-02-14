@@ -213,6 +213,8 @@ Error message and password prompt
 
 <li>Portainer</li>
 
+<li>Prune branches</li>
+
 <li>Static Code Analysis Tools to Check Out</li>
 
 </ul>
@@ -9492,7 +9494,7 @@ https://comby.live/
 <div created="20191201032851814" modified="20191201105702818" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20200204125618682" list="[[Automated Testing for Terraform, Docker, Packer, Kubernetes]] [[Static Code Analysis Tools to Check Out]] [[Maximizing Performance with GraalVM]] [[&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder]] Portainer" modified="20200204125618682" title="$:/StoryList">
+<div list="[[Prune branches]] [[Automated Testing for Terraform, Docker, Packer, Kubernetes]] [[Static Code Analysis Tools to Check Out]] [[Maximizing Performance with GraalVM]] [[&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder]] Portainer" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9704,6 +9706,17 @@ $ docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docke
 
 Runs on http://localhost:9000/
 </pre>
+</div>
+<div created="20200214152229843" modified="20200214152600417" tags="CLI Git" title="Prune branches">
+<pre>```
+git fetch --prune
+```
+removes remote branches from local repo
+
+```
+git fetch -p &amp;&amp; for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+```
+deletes local branches without a remote</pre>
 </div>
 <div created="20191218003005740" modified="20200204130232612" tags="[[Static Code Analysis]]" title="Static Code Analysis Tools to Check Out">
 <pre>* https://fbinfer.com
