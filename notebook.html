@@ -9496,7 +9496,7 @@ https://comby.live/
 <div created="20191201032851814" modified="20191201105702818" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div list="[[GitHub Cheats]] [[Prune branches]] [[Automated Testing for Terraform, Docker, Packer, Kubernetes]] [[Static Code Analysis Tools to Check Out]] [[Maximizing Performance with GraalVM]] [[&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder]] Portainer" title="$:/StoryList">
+<div created="20200723192605307" list="[[GitHub Cheats]] [[Prune branches]] [[Automated Testing for Terraform, Docker, Packer, Kubernetes]] [[Static Code Analysis Tools to Check Out]] [[Maximizing Performance with GraalVM]] [[&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder]] Portainer" modified="20200723192831274" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9544,11 +9544,11 @@ https://comby.live/
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1600&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1080&quot;
+            &quot;text&quot;: &quot;900&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -9719,12 +9719,12 @@ The following tests were failing at the same time:
 * Throughput still better JIT compiler when large volume is concerned, due to better profiling information
 * Profile guided optimization for AOT can be used for AOT to keep up</pre>
 </div>
-<div created="20191201032510945" modified="20191201032825587" tags="Docker" title="Portainer">
+<div created="20191201032510945" modified="20200723192915219" tags="Docker" title="Portainer">
 <pre>https://www.portainer.io/
 
 ```
-$ docker volume create portainer_data
-$ docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart unless-stopped portainer/portainer
+docker volume create portainer_data
+docker run -d -name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart unless-stopped --label com.centurylinklabs.watchtower.enable=true portainer/portainer
 ```
 
 Runs on http://localhost:9000/
