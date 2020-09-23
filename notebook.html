@@ -191,6 +191,8 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
+<li>$:/temp/search</li>
+
 <li>$:/theme</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
@@ -9496,7 +9498,7 @@ https://comby.live/
 <div created="20191201032851814" modified="20191201105702818" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
-<div created="20200723192605307" list="Watchtower [[Prune branches]] [[Automated Testing for Terraform, Docker, Packer, Kubernetes]] [[Static Code Analysis Tools to Check Out]] [[Maximizing Performance with GraalVM]] [[&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder]] Portainer" modified="20200723192831274" title="$:/StoryList">
+<div list="Watchtower [[Prune branches]] [[Automated Testing for Terraform, Docker, Packer, Kubernetes]] [[Static Code Analysis Tools to Check Out]] [[Maximizing Performance with GraalVM]] [[&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder]] Portainer" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9556,6 +9558,9 @@ https://comby.live/
         }
     }
 }</pre>
+</div>
+<div created="20200923165222853" modified="20200923165223609" title="$:/temp/search">
+<pre>port</pre>
 </div>
 <div created="20191201033136734" modified="20191201033143825" title="$:/theme">
 <pre>$:/themes/tiddlywiki/snowwhite</pre>
@@ -9698,12 +9703,12 @@ https://comby.live/
 * Throughput still better JIT compiler when large volume is concerned, due to better profiling information
 * Profile guided optimization for AOT can be used for AOT to keep up</pre>
 </div>
-<div created="20191201032510945" modified="20200723192915219" tags="Docker" title="Portainer">
+<div created="20191201032510945" modified="20200923165247194" tags="Docker" title="Portainer">
 <pre>https://www.portainer.io/
 
 ```
 docker volume create portainer_data
-docker run -d -name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart unless-stopped --label com.centurylinklabs.watchtower.enable=true portainer/portainer
+docker run -d -name portainer -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data --restart unless-stopped --label com.centurylinklabs.watchtower.enable=true portainer/portainer-ce
 ```
 
 Runs on http://localhost:9000/
@@ -9729,8 +9734,7 @@ deletes local branches without a remote</pre>
 Youtube video on the topic https://www.youtube.com/watch?v=c5kuBQcVChY&amp;list=WL&amp;index=119</pre>
 </div>
 <div created="20200723193010181" modified="20200723193041838" tags="" title="Watchtower">
-<pre>
-```
+<pre>```
 docker run -d  --name watchtower -v /var/run/docker.sock:/var/run/docker.sock  containrrr/watchtower --cleanup --label-enable
 ```
 </pre>
