@@ -8,11 +8,11 @@ import { HeroesComponent } from './heroes/heroes.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HeroesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
